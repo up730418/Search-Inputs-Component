@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head> 
+		<script src="./searchInputs.js"></script>
+		
+	</head>
+
+	<body>
+		<!-- <search-stuff id="SI" 
+		names="one,two,two,two,anemail,acheck,input3,submit" 
+		types="text,radio,radio,radio,email,checkbox,email,submit" 
+		labels="one,male,female,other,User eamil,are you awsome,email,submit" 
+		values="one,,,,,,,submit"
+		radiovalues="male,female,other"
+		radioselected="female"
+		formId="test1" 
+		action="" 
+		JSONdata=""></search-stuff> -->
+
+		<div id="searchs"> </div>
+	</body>
+</html>
+
+<script>
+	x = JSON.stringify({'formid' : 'form1',
+						'action': '',
+						'inputs': [{'type' : 'text', 'name': 'one', 'label': 'THREEE', 'value': 'one'}, 
+									{'type' : 'email', 'name': 'two', 'label': 'email', 'value': 'DOH'}, 
+									{'type' : 'number', 'name': 'three', 'label': 'number', 'value': ''}, 
+									{'type' : 'url', 'name': 'four', 'label': 'url', 'value': ''}, 
+									{'type' : 'checkbox', 'name': 'five', 'label': 'checkbox', 'value': ''}, 
+									{'type' : 'radio', 'name': 'six', 'label': 'radio One', 'value': 'Y'}, 
+									{'type' : 'radio', 'name': 'six', 'label': 'Radio Two', 'value': 'N', 'selected': 'true'}, 
+									{'type' : 'tel', 'name': 'seven', 'label': 'tel', 'value': '0778965885512'},
+									{'type' : 'newThing', 'label': 'Super awsome thing', 'attributes': {'type': 'text', 'placeholder': 'samSmith', 'name': 'seven', 'value': '0778965885512', 'data-SOID': 'SO_1232423', 'data-smith': 'doh'}},
+									{'type' : 'submit', 'name': 'submit', 'label': '', 'value': 'submit'}]});
+
+	let newInput = document.createElement('search-stuff');
+    newInput.setAttribute('JSONdata', x);
+
+    searchs.appendChild(newInput);
+</script>
